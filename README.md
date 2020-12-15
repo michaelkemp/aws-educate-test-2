@@ -18,3 +18,9 @@ sysctl -p /etc/sysctl.conf
 ```
 sudo route add -net 172.31.10x.0 netmask 255.255.255.0 gw 172.31.y.z
 ```
+
+## Note
+-- Source/Destination Checks must be turned off for the router and the added network cards for traffic to flow
+```
+source_dest_check = false
+```
