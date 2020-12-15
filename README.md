@@ -6,7 +6,7 @@
 - 3 EC2 Instances - 2 Clients in the 101 and 102 subnets, and a Router in the 103 Subnet
 - Security Groups such that the 101 and 102 client can only talk to the router
 
-## Setup
+## Setup Scripts [user_data]
 
 - Turn on IP Forwarding on the router
 ```
