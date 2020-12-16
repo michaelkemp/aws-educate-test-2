@@ -4,9 +4,9 @@ data "external" "ipify" {
 }
 
 ############ SSH FROM MY IP SECURITY GROUP ############
-resource "aws_security_group" "SSH" {
-  name        = "SSH"
-  description = "SSH Security Group"
+resource "aws_security_group" "SSH2" {
+  name        = "SSH2"
+  description = "SSH2 Security Group"
   vpc_id      = aws_default_vpc.default.id
   ingress {
     from_port   = 22
@@ -87,7 +87,7 @@ resource "aws_instance" "router103" {
   associate_public_ip_address = true
   source_dest_check           = false
   key_name                    = aws_key_pair.generated_key.key_name
-  vpc_security_group_ids      = [aws_security_group.FROM101.id, aws_security_group.FROM102.id, aws_security_group.SSH.id]
+  vpc_security_group_ids      = [aws_security_group.FROM101.id, aws_security_group.FROM102.id, aws_security_group.SSH2.id]
   user_data                   = <<-EOF
     #!/bin/bash
     sudo yum update -y && sudo yum upgrade -y

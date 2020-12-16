@@ -8,7 +8,7 @@ resource "aws_instance" "linux101" {
   subnet_id                   = aws_subnet.public-101.id
   associate_public_ip_address = true
   key_name                    = aws_key_pair.generated_key.key_name
-  vpc_security_group_ids      = [aws_security_group.FROM101.id, aws_security_group.SSH.id]
+  vpc_security_group_ids      = [aws_security_group.FROM101.id, aws_security_group.SSH2.id]
   user_data                   = <<-EOF
     #!/bin/bash
     sudo yum update -y && sudo yum upgrade -y
@@ -26,7 +26,7 @@ resource "aws_instance" "linux102" {
   subnet_id                   = aws_subnet.public-102.id
   associate_public_ip_address = true
   key_name                    = aws_key_pair.generated_key.key_name
-  vpc_security_group_ids      = [aws_security_group.FROM102.id, aws_security_group.SSH.id]
+  vpc_security_group_ids      = [aws_security_group.FROM102.id, aws_security_group.SSH2.id]
   user_data                   = <<-EOF
     #!/bin/bash
     sudo yum update -y && sudo yum upgrade -y
