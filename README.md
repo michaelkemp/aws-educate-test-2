@@ -1,5 +1,10 @@
 # aws-educate-test-2
 
+## Part 2
+
+- For information on connectiong to an educate account and rolling out infrastucture with Terraform, see [aws-educate-test](https://github.com/michaelkemp/aws-educate-test)
+- Infrastructure in this part does not collide with part 1. They can run together or separately.
+
 ## Simple Routing in AWS
 
 - 3 Subnets - 172.31.101.0/24, 172.31.102.0/24, 172.31.103.0/24
