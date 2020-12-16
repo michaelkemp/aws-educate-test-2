@@ -10,6 +10,7 @@
 - 3 Subnets - 172.31.101.0/24, 172.31.102.0/24, 172.31.103.0/24
 - 3 EC2 Instances - 2 Clients in the 101 and 102 subnets, and a Router in the 103 Subnet
 - Security Groups such that the 101 and 102 client can only talk to the router
+- The router is a t2.small ranter than a t2.micro in order for it to have 3 network interface cards.
 
 ## Setup Scripts [user_data]
 
